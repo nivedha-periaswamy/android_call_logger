@@ -36,7 +36,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
       //  database.execSQL("create table if not exists call_log ( id integer primary key auto increment, phone_number text , call_type text ,call_date text ,call_duration text ) ;");
 
     }
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+table_name);
         onCreate(db);
     }
